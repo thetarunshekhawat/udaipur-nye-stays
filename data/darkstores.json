@@ -1,0 +1,377 @@
+[
+ {
+  "platform": "blinkit",
+  "name": "Blinkit Store - Ganapati Nagar",
+  "area": "Ganapati Nagar",
+  "lng": 73.723,
+  "lat": 24.582,
+  "props": {
+   "slug": "blinkit-udaipur-ganapati-nagar-popular-electronic-hardware",
+   "platform": "blinkit",
+   "name": "Blinkit Store - Ganapati Nagar",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Ganapati Nagar",
+   "areaKey": "udaipur-ganapati-nagar",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-NNNKVJMJ",
+   "landmark": "Popular Electronic & HardWare",
+   "exact": true,
+   "cell": [
+    23094,
+    14074
+   ]
+  }
+ },
+ {
+  "platform": "blinkit",
+  "name": "Blinkit Store - Hiran Magri",
+  "area": "Hiran Magri",
+  "lng": 73.725,
+  "lat": 24.563,
+  "props": {
+   "slug": "blinkit-udaipur-hiran-magri-poonam-furniture-udyog",
+   "platform": "blinkit",
+   "name": "Blinkit Store - Hiran Magri",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Hiran Magri",
+   "areaKey": "udaipur-hiran-magri",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-VY2P7DC0",
+   "landmark": "Poonam Furniture Udyog",
+   "exact": true,
+   "cell": [
+    23094,
+    14076
+   ]
+  }
+ },
+ {
+  "platform": "blinkit",
+  "name": "Blinkit - Mahaveer Colony Park",
+  "area": "Mahaveer Colony Park",
+  "lng": 73.691,
+  "lat": 24.621,
+  "props": {
+   "slug": "blinkit-udaipur-mahaveer-colony-park-green-motor-driving",
+   "platform": "blinkit",
+   "name": "Blinkit - Mahaveer Colony Park",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Mahaveer Colony Park",
+   "areaKey": "udaipur-mahaveer-colony-park",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-CCA2DD2B",
+   "landmark": "Green Motor Driving School",
+   "exact": true,
+   "cell": [
+    23091,
+    14070
+   ]
+  }
+ },
+ {
+  "platform": "blinkit",
+  "name": "Blinkit Store - Malla Talai",
+  "area": "Malla Talai",
+  "lng": 73.671,
+  "lat": 24.582,
+  "props": {
+   "slug": "blinkit-udaipur-malla-talai-event-planner",
+   "platform": "blinkit",
+   "name": "Blinkit Store - Malla Talai",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Malla Talai",
+   "areaKey": "udaipur-malla-talai",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-2VYPE6DQ",
+   "landmark": "Event Planner Udaipur",
+   "exact": true,
+   "cell": [
+    23089,
+    14074
+   ]
+  }
+ },
+ {
+  "platform": "blinkit",
+  "name": "Blinkit Store - Pratap Nagar",
+  "area": "Pratap Nagar",
+  "lng": 73.763,
+  "lat": 24.592,
+  "props": {
+   "slug": "blinkit-udaipur-pratap-nagar-shree-krishna-textiles",
+   "platform": "blinkit",
+   "name": "Blinkit Store - Pratap Nagar",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Pratap Nagar",
+   "areaKey": "udaipur-pratap-nagar",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-D51E6RGF",
+   "landmark": "Shree Krishna Textile's",
+   "exact": true,
+   "cell": [
+    23098,
+    14073
+   ]
+  }
+ },
+ {
+  "platform": "blinkit",
+  "name": "Blinkit Store - Savina",
+  "area": "Savina",
+  "lng": 73.698,
+  "lat": 24.546,
+  "props": {
+   "slug": "blinkit-udaipur-savina-akash-ganga-building",
+   "platform": "blinkit",
+   "name": "Blinkit Store - Savina",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Savina",
+   "areaKey": "udaipur-savina",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-N04ZP6PV",
+   "landmark": "Akash Ganga Building",
+   "exact": true,
+   "cell": [
+    23092,
+    14078
+   ]
+  }
+ },
+ {
+  "platform": "blinkit",
+  "name": "Blinkit - Sobhagpura",
+  "area": "Sobhagpura",
+  "lng": 73.716,
+  "lat": 24.603,
+  "props": {
+   "slug": "blinkit-udaipur-sobhagpura-feet-road-jk",
+   "platform": "blinkit",
+   "name": "Blinkit - Sobhagpura",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Sobhagpura",
+   "areaKey": "udaipur-sobhagpura",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-7DZJF3N9",
+   "landmark": "100 Feet Road JK Paras Hospital Lane",
+   "exact": true,
+   "cell": [
+    23093,
+    14072
+   ]
+  }
+ },
+ {
+  "platform": "blinkit",
+  "name": "Blinkit Store - Udaipur",
+  "area": "Shakti Nagar",
+  "lng": 73.703,
+  "lat": 24.585,
+  "props": {
+   "slug": "blinkit-udaipur-udaipur-alka-hotel-rd",
+   "platform": "blinkit",
+   "name": "Blinkit Store - Udaipur",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Shakti Nagar",
+   "areaKey": "udaipur-shakti-nagar",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-6Z29B5TE",
+   "landmark": "Alka Hotel Rd",
+   "exact": true,
+   "cell": [
+    23092,
+    14074
+   ]
+  }
+ },
+ {
+  "platform": "zepto",
+  "name": "UDR-Pooja Nagar",
+  "area": "Hiran Magri",
+  "lng": 73.725,
+  "lat": 24.566,
+  "props": {
+   "slug": "zepto-udaipur-hiran-magri-poonam-furniture-udyog",
+   "platform": "zepto",
+   "name": "UDR-Pooja Nagar",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Hiran Magri",
+   "areaKey": "udaipur-hiran-magri",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-PBEF747S",
+   "landmark": "Poonam Furniture Udyog",
+   "exact": true,
+   "cell": [
+    23094,
+    14076
+   ]
+  }
+ },
+ {
+  "platform": "zepto",
+  "name": "UDR-Fatehpura",
+  "area": "Panchwati",
+  "lng": 73.69,
+  "lat": 24.598,
+  "props": {
+   "slug": "zepto-udaipur-panchwati-dr-davendra-sareen",
+   "platform": "zepto",
+   "name": "UDR-Fatehpura",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Panchwati",
+   "areaKey": "udaipur-panchwati",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-DFXTY9KN",
+   "landmark": "Dr Davendra Sareen",
+   "exact": true,
+   "cell": [
+    23091,
+    14072
+   ]
+  }
+ },
+ {
+  "platform": "zepto",
+  "name": "UDR-Hiran Magri",
+  "area": "Savina",
+  "lng": 73.704,
+  "lat": 24.542,
+  "props": {
+   "slug": "zepto-udaipur-savina-akash-ganga-building",
+   "platform": "zepto",
+   "name": "UDR-Hiran Magri",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Savina",
+   "areaKey": "udaipur-savina",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-8DT85Y62",
+   "landmark": "Akash Ganga Building",
+   "exact": true,
+   "cell": [
+    23092,
+    14078
+   ]
+  }
+ },
+ {
+  "platform": "zepto",
+  "name": "UDR-Shobhagpura",
+  "area": "Shobhagpura",
+  "lng": 73.708,
+  "lat": 24.604,
+  "props": {
+   "slug": "zepto-udaipur-shobhagpura-the-toast-house",
+   "platform": "zepto",
+   "name": "UDR-Shobhagpura",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Shobhagpura",
+   "areaKey": "udaipur-shobhagpura",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-WAXPMWAA",
+   "landmark": "The Toast House",
+   "exact": true,
+   "cell": [
+    23093,
+    14072
+   ]
+  }
+ },
+ {
+  "platform": "swiggy_instamart",
+  "name": "Swiggy Instamart - Bhuwana",
+  "area": "Bhuwana",
+  "lng": 73.706,
+  "lat": 24.618,
+  "props": {
+   "slug": "swiggy-instamart-udaipur-bhuwana-icici-bank-atm",
+   "platform": "swiggy_instamart",
+   "name": "Swiggy Instamart - Bhuwana",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Bhuwana",
+   "areaKey": "udaipur-bhuwana",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-ZYX5MEDE",
+   "landmark": "ICICI Bank ATM",
+   "exact": true,
+   "cell": [
+    23092,
+    14070
+   ]
+  }
+ },
+ {
+  "platform": "swiggy_instamart",
+  "name": "Swiggy Instamart - Madhuban",
+  "area": "Madhuban",
+  "lng": 73.702,
+  "lat": 24.59,
+  "props": {
+   "slug": "swiggy-instamart-udaipur-madhuban-ujjwal-apartment",
+   "platform": "swiggy_instamart",
+   "name": "Swiggy Instamart - Madhuban",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Madhuban",
+   "areaKey": "udaipur-madhuban",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-TKZP755K",
+   "landmark": "Ujjwal Apartment",
+   "exact": true,
+   "cell": [
+    23092,
+    14073
+   ]
+  }
+ },
+ {
+  "platform": "swiggy_instamart",
+  "name": "Swiggy Instamart - Udaipur",
+  "area": "Central Area",
+  "lng": 73.712,
+  "lat": 24.562,
+  "props": {
+   "slug": "swiggy-instamart-udaipur-udaipur-tekri-madri-link",
+   "platform": "swiggy_instamart",
+   "name": "Swiggy Instamart - Udaipur",
+   "city": "Udaipur",
+   "citySlug": "udaipur",
+   "area": "Central Area",
+   "areaKey": "udaipur-central-area",
+   "state": "Rajasthan",
+   "cityTier": "tier_2",
+   "key": "QCM-F8RG1XPJ",
+   "landmark": "Tekri Madri Link Rd",
+   "exact": true,
+   "cell": [
+    23093,
+    14076
+   ]
+  }
+ }
+]

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Udaipur NYE stays · our shortlist</title>
+  <meta name="description" content="Our shortlist of 86 Udaipur homes and pool villas for 29 Dec – 1 Jan, 6 guests. Photos, prices, map and quick-commerce coverage.">
+  <meta property="og:title" content="Udaipur NYE stays · our shortlist">
+  <meta property="og:description" content="86 homes and pool villas for 29 Dec – 1 Jan, 6 guests. Pick your favourites.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://a0.muscache.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/" aria-label="Home">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 3 3 14h4v14h7v-8h4v8h7V14h4L16 3Z" fill="currentColor"/><path d="M25 3l1 2.2 2.2 1-2.2 1L25 9.4l-1-2.2-2.2-1 2.2-1L25 3Z" fill="currentColor"/></svg>
+        <span>nye<b>stays</b></span>
+      </a>
+      <button class="searchpill" id="searchpill" type="button" aria-label="Trip details">
+        <span class="sp-seg"><strong>Udaipur</strong></span>
+        <span class="sp-seg">29 Dec – 1 Jan</span>
+        <span class="sp-seg muted">6 guests</span>
+        <span class="sp-go" aria-hidden="true"><svg viewBox="0 0 32 32" width="12" height="12"><path d="M13 24a11 11 0 1 1 0-22 11 11 0 0 1 0 22Zm0-3a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm8.5-.8 7.9 7.9-2.1 2.1-7.9-7.9 2.1-2.1Z" fill="currentColor"/></svg></span>
+      </button>
+      <a class="savedbtn" href="#/saved" id="savedbtn">
+        <svg viewBox="0 0 32 32" width="16" height="16" aria-hidden="true"><path d="M16 28c7-4.7 14-10 14-17 0-3.9-3.1-7-7-7-2.8 0-5.2 1.7-7 4-1.8-2.3-4.2-4-7-4-3.9 0-7 3.1-7 7 0 7 7 12.3 14 17Z" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+        <span>Shortlist</span><span class="count" id="savedcount">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="foot">
+    <p>A trip shortlist made for friends. Not affiliated with Airbnb. Photos and listing details come from each listing's public Airbnb page.
+      Prices are for 29 Dec 2026 – 1 Jan 2027, 6 guests, before taxes, checked on 26 Nov 2026, and can change. Use "Check on Airbnb" for the live price.
+      Quick-commerce coverage is an estimate from distance to the nearest dark store (store locations: quickcommercemap.com).</p>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>

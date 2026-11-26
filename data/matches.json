@@ -1,0 +1,604 @@
+{
+ "nye-1": {
+  "airbnbId": "1458594703843853022",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Alok jee Homestay First Floor",
+  "method": "search-name+price"
+ },
+ "nye-2": {
+  "airbnbId": "1054030651683607885",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "“Shubh”luxury stay in Udaipur",
+  "method": "photo-hosting-id"
+ },
+ "nye-3": {
+  "airbnbId": "48877181",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Experience the Heritage Escape | JagStay Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-4": {
+  "airbnbId": "1653787691560826443",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "2BHK Villa in Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-5": {
+  "airbnbId": "1576785967285751625",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Vatsalya Villa 2BHK",
+  "method": "photo-hosting-id"
+ },
+ "nye-6": {
+  "airbnbId": "1797833918209159507",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Dilkush Nursery",
+  "method": "search-name+price"
+ },
+ "nye-7": {
+  "airbnbId": "1271415585150253521",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Chateau",
+  "method": "search-name+price"
+ },
+ "nye-8": {
+  "airbnbId": "1005699820549456892",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Relax home stay 2BHK home near fatehsagar",
+  "method": "photo-hosting-id"
+ },
+ "nye-9": {
+  "airbnbId": "1539717096003610566",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Cozy Flat - Peaceful stay in Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-10": {
+  "airbnbId": "1534791180143552929",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Cozy Apartment - Peaceful stay in Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-11": {
+  "airbnbId": "1798263959552890540",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Entire 3BHK near Shobhagpura's 100 Ft Rd",
+  "method": "search-name+price"
+ },
+ "nye-12": {
+  "airbnbId": "1556998745131147141",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Brij Villa- Where Calm Meets the Hills, Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-13": {
+  "airbnbId": "1175086194589326701",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Medhya Boutique Homestay",
+  "method": "search-name+price"
+ },
+ "nye-14": {
+  "airbnbId": "1823223287437489499",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Rainbow Villa - Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-15": {
+  "airbnbId": "865228620255651599",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Villa by the Hill | Spacious & Peaceful 3BHK Stay",
+  "method": "search-name+price"
+ },
+ "nye-16": {
+  "airbnbId": "1794169775719885214",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Gharana | Your Heritage home near old city",
+  "method": "photo-hosting-id"
+ },
+ "nye-17": {
+  "airbnbId": "1785464725672351404",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "3BHK Apartment in Central Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-18": {
+  "airbnbId": "1056849725506767318",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "AK Villa | Luxury Unveiled",
+  "method": "search-name+price"
+ },
+ "nye-19": {
+  "airbnbId": "1511650325191584254",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Mountain Villa Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-20": {
+  "airbnbId": "869236728804565699",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Private balcony | City of lakes | Spacious 3BHK",
+  "method": "search-name+price"
+ },
+ "nye-21": {
+  "airbnbId": "1631647613918604567",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Central 2BHK Home | Near Station & Tourist Spots",
+  "method": "search-name+price"
+ },
+ "nye-22": {
+  "airbnbId": "1537001176747666382",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Clean, Cozy & Comfortable 3BHK with Kitchenette 1A",
+  "method": "search-name+price"
+ },
+ "nye-23": {
+  "airbnbId": "1669374628953597827",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Dityam - The Cozy Nest 3BHK Luxury | Near highway",
+  "method": "search-name+price"
+ },
+ "nye-24": {
+  "airbnbId": "1504760374005103284",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Arvasa Homes – Zenith 3-Bedroom Getaway",
+  "method": "search-name+price"
+ },
+ "nye-25": {
+  "airbnbId": "1168673472075061935",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Madhav Homes | Seher | Heart of Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-26": {
+  "airbnbId": "1617725811715194504",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Ivory Nest | 3BHK • Balcony • Fitness Corner",
+  "method": "search-name+price"
+ },
+ "nye-27": {
+  "airbnbId": "1780511861630868083",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Cozy Pet-Friendly 2BHK Near Fateh Sagar",
+  "method": "photo-hosting-id"
+ },
+ "nye-28": {
+  "airbnbId": "1790596049064902953",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Vāyu Retreat | 3 Bedrooms & Balconies",
+  "method": "search-name+price"
+ },
+ "nye-29": {
+  "airbnbId": "1749143874732506294",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Canopy House - 3BHK Property in City Centre",
+  "method": "search-name+price"
+ },
+ "nye-30": {
+  "airbnbId": "1747947732551930668",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Wisteria House - 3BHK Property in City Centre",
+  "method": "search-name+price"
+ },
+ "nye-31": {
+  "airbnbId": "753250893584581697",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Central Casa - A Modern 3BHK located in Posh Area",
+  "method": "search-name+price"
+ },
+ "nye-32": {
+  "airbnbId": "1733663841440148929",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Lakeside Bliss -3 Bed Apt & pvt kitchen -B Floor",
+  "method": "search-name+price"
+ },
+ "nye-33": {
+  "airbnbId": "1311726497193316268",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Home in Udaipur - Luxurious 2400 Sq Ft Apartment",
+  "method": "search-name+price"
+ },
+ "nye-34": {
+  "airbnbId": "1606527048323563021",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Eclipse 2bhk Apartment with Bathtub | Hued Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-35": {
+  "airbnbId": "1807288298054018612",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "3 BHK Farm Stay with Swimming Pool in Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-36": {
+  "airbnbId": "1813634242369995716",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Nivara Nature Villa  Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-37": {
+  "airbnbId": "1754447302268771583",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Madhav Homes | Saanjh | Heart of Udaipur",
+  "method": "search-name+price"
+ },
+ "nye-38": {
+  "airbnbId": "1315196127814264978",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Luxury Penthouse Villa 401,Near Saheliyon Ki Bari",
+  "method": "search-name+price"
+ },
+ "nye-39": {
+  "airbnbId": "1501957425957381474",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Cozy 3BHK Pvt Villa | Patio & Jhula | City Center",
+  "method": "search-name+price"
+ },
+ "nye-40": {
+  "airbnbId": "1605687734186561323",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Basero Homestays | Villa Near Fateh Sagar Lake",
+  "method": "search-name+price"
+ },
+ "pool-1": {
+  "airbnbId": "1769454497429797491",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Serene pool villa",
+  "method": "search-name+price"
+ },
+ "pool-2": {
+  "airbnbId": "1670096958577916435",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "2bhk villa for staycation",
+  "method": "search-name+price"
+ },
+ "pool-3": {
+  "airbnbId": "1744170613706244010",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Villa in Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-4": {
+  "airbnbId": "1088284236324677883",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Udaipur Luxurious Villa 2BHK",
+  "method": "search-name+price"
+ },
+ "pool-5": {
+  "airbnbId": "1778972067361577275",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Serene PoolVilla Near Udaipur’s Scenic Countryside",
+  "method": "search-name+price"
+ },
+ "pool-6": {
+  "airbnbId": "1810776613511683525",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Shergarh Family stay in Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-7": {
+  "airbnbId": "1627515443530299665",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "2bhk Villa•Pool• Garden",
+  "method": "search-name+price"
+ },
+ "pool-8": {
+  "airbnbId": "1582023055565453427",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Villas By Himsa’s Kitchen And Restaurant",
+  "method": "search-name+price"
+ },
+ "pool-9": {
+  "airbnbId": "1542846877473875933",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "nice place Best location",
+  "method": "search-name+price"
+ },
+ "pool-10": {
+  "airbnbId": "1815832944521541065",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Luxury Private Pool villa in Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-11": {
+  "airbnbId": "1670425718347322106",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Velora Box Villa 2 bhk private Pool Garden Hall",
+  "method": "search-name+price"
+ },
+ "pool-12": {
+  "airbnbId": "1504046923918420351",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "nisarg villa udaipur",
+  "method": "search-name+price"
+ },
+ "pool-13": {
+  "airbnbId": "1734653192681860063",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "HEMAN VILLA\nWhere Luxury Meets Serenity.",
+  "method": "search-name+price"
+ },
+ "pool-14": {
+  "airbnbId": "1823707097604300485",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Luxury 3BHK Villa with Pool & Hill Views",
+  "method": "search-name+price"
+ },
+ "pool-15": {
+  "airbnbId": "1704918681202540830",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Private Tranquil poolside Ground Suite 2bhk",
+  "method": "search-name+price"
+ },
+ "pool-16": {
+  "airbnbId": "1531888216168099275",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Kamya Home's 4BHK Valley View",
+  "method": "search-name+price"
+ },
+ "pool-17": {
+  "airbnbId": "1590020758934309833",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Hasin Villa at Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-18": {
+  "airbnbId": "988047493151731711",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Shiv Vijay Vilas-5 BHK Pool Villa",
+  "method": "search-name+price"
+ },
+ "pool-19": {
+  "airbnbId": "988038574154298583",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Shiv Vijay Vilas -3 BHK Pool Villa",
+  "method": "search-name+price"
+ },
+ "pool-20": {
+  "airbnbId": "1662898350423843991",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "TheFarmSide_Villa",
+  "method": "search-name+price"
+ },
+ "pool-21": {
+  "airbnbId": "38130552",
+  "overlap": 0.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "B-303 LACK GARDEN GORDHANVILAS,UDAIPUR(RAJ):",
+  "method": "search-name+price"
+ },
+ "pool-22": {
+  "airbnbId": "1638584422367759432",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Mount villa 3.0",
+  "method": "search-name+price"
+ },
+ "pool-23": {
+  "airbnbId": "1823223287437489499",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Rainbow Villa - Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-24": {
+  "airbnbId": "1818752511018878347",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "luxury villa 3 BHK hills view",
+  "method": "search-name+price"
+ },
+ "pool-25": {
+  "airbnbId": "773955646064753801",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Shivraj Farms",
+  "method": "search-name+price"
+ },
+ "pool-26": {
+  "airbnbId": "32887242",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Gulmohar Villa (perfect family getaway)",
+  "method": "search-name+price"
+ },
+ "pool-27": {
+  "airbnbId": "631623216021531927",
+  "overlap": 0.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Pleasant stay at farm with pool, garden ,bed room",
+  "method": "search-name+price"
+ },
+ "pool-28": {
+  "airbnbId": "1817226750760366907",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The impossible villa, amberi",
+  "method": "search-name+price"
+ },
+ "pool-29": {
+  "airbnbId": "1757237892027675308",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Retreat stay in hills",
+  "method": "search-name+price"
+ },
+ "pool-30": {
+  "airbnbId": "1347189133673459046",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Peaceful County",
+  "method": "search-name+price"
+ },
+ "pool-31": {
+  "airbnbId": "1808448648110932330",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Aravilla 2.0 stay farm",
+  "method": "search-name+price"
+ },
+ "pool-32": {
+  "airbnbId": "1389731395730760707",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Mountain luxurious villa",
+  "method": "search-name+price"
+ },
+ "pool-33": {
+  "airbnbId": "1447060055695486350",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Luxury 3BHK Villa in Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-34": {
+  "airbnbId": "1275297540510788058",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The Gulmohar villa (Projector n pool)",
+  "method": "search-name+price"
+ },
+ "pool-35": {
+  "airbnbId": "1645992173517317534",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "The sakha villa 4 bhk",
+  "method": "search-name+price"
+ },
+ "pool-36": {
+  "airbnbId": "1751953190353929042",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "2bhk villa",
+  "method": "search-name+price"
+ },
+ "pool-37": {
+  "airbnbId": "1511650325191584254",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Mountain Villa Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-38": {
+  "airbnbId": "735213546707032312",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Shiv Vijay Vilas - 4 BHK Pool Villa",
+  "method": "search-name+price"
+ },
+ "pool-39": {
+  "airbnbId": "1492581043792611374",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "3 bhk villa at Dhikli.",
+  "method": "search-name+price"
+ },
+ "pool-40": {
+  "airbnbId": "1483979637016983894",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "UdaiSangam - Private villa with Swimming Pool",
+  "method": "search-name+price"
+ },
+ "pool-41": {
+  "airbnbId": "1731102867042614031",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Villa in Udaipur | Near by Baahubali hills",
+  "method": "search-name+price"
+ },
+ "pool-42": {
+  "airbnbId": "1509225127709312606",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Bhanwar villa",
+  "method": "search-name+price"
+ },
+ "pool-43": {
+  "airbnbId": "1540676533735047966",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Matrachhaya Villa",
+  "method": "search-name+price"
+ },
+ "pool-44": {
+  "airbnbId": "1810635888642589660",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "Serene PoolVilla Near Udaipur’s Scenic Countryside",
+  "method": "search-name+price"
+ },
+ "pool-45": {
+  "airbnbId": "1810797208768034000",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "2 BHK Entire Villa with pool in Udaipur",
+  "method": "search-name+price"
+ },
+ "pool-46": {
+  "airbnbId": "1563846783637244327",
+  "overlap": 1.0,
+  "nameSim": 1.0,
+  "airbnbTitle": "House of Queens 2bhk By Bookmyvillas",
+  "method": "search-name+price"
+ }
+}
