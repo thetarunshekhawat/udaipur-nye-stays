@@ -68,6 +68,14 @@ Pushing to `main` runs `.github/workflows/pages.yml`, which publishes `site/` to
 
 ## Changelog
 
+- 2026-11-26: Mobile pass. Native swipe (scroll-snap) photo carousels on cards; full-width swipeable photo
+  strip with back/share/save buttons and a photo counter on listing pages; price breakdown section and a
+  save heart in the bottom bar; map pins open a bottom card instead of a popup, bigger tap targets on
+  small pins, no zoom buttons, page behind the map locked; filter chips no longer sticky (sticky header
+  area 191 px -> 130 px on an iPhone 14); 16 px sort menu so iOS doesn't zoom; safe-area padding for
+  the iPhone home bar; tighter header under 400 px; home-screen icon and web manifest; link preview
+  image for WhatsApp. Tested on iPhone 14, Galaxy S9+ (320 px) and iPad Mini emulation.
+
 - 2026-11-26: First version. Extracted 86 listings and 2,732 photos from both sheets; matched all 86 to their
   Airbnb listings; added descriptions, amenities, hosts, category ratings, house rules and locations;
   quick-commerce coverage estimate; Airbnb-style site with map, gallery and shareable shortlist; tested

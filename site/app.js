@@ -158,7 +158,7 @@
       : l.isNew ? `<span class="pill-badge">New</span>` : "";
     return `<a class="card" href="#/l/${l.id}" data-id="${l.id}">
       <div class="media">
-        <div class="track-img" data-i="0">${photos.map((p, i) => `<img ${i ? 'data-src' : 'src'}="${esc(img(p))}" alt="" ${i ? "" : 'loading="lazy"'} decoding="async">`).join("")}</div>
+        <div class="track-img">${photos.map((p) => `<img src="${esc(img(p))}" alt="" loading="lazy" decoding="async" draggable="false">`).join("")}</div>
         ${badge}
         <button class="heart ${S.saved.has(l.id) ? "on" : ""}" data-heart="${l.id}" aria-label="Save ${esc(l.name)}" aria-pressed="${S.saved.has(l.id)}">${ICON.heart}</button>
         <button class="nav prev" data-dir="-1" aria-label="Previous photo" hidden>${ICON.left}</button>
@@ -183,25 +183,22 @@
       const nav = e.target.closest(".nav");
       if (nav) {
         e.preventDefault(); e.stopPropagation();
-        const media = nav.closest(".media"), track = $(".track-img", media);
-        const imgs = $$("img", track), n = imgs.length;
-        let i = Math.max(0, Math.min(n - 1, +track.dataset.i + +nav.dataset.dir));
-        track.dataset.i = i;
-        [i, i + 1].forEach((k) => { const im = imgs[k]; if (im && im.dataset.src) { im.src = im.dataset.src; delete im.dataset.src; } });
-        track.style.transform = `translateX(${-100 * i}%)`;
-        $$(".dots i", media).forEach((d, k) => d.classList.toggle("on", k === i));
-        $(".prev", media).hidden = i === 0; $(".next", media).hidden = i === n - 1;
+        const track = $(".track-img", nav.closest(".media"));
+        track.scrollBy({ left: track.clientWidth * +nav.dataset.dir, behavior: "smooth" });
       }
     });
-    // touch swipe on cards
-    let sx = 0, sy = 0, tgt = null;
-    root.addEventListener("touchstart", (e) => { const m = e.target.closest(".media"); if (!m) return; tgt = m; sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
-    root.addEventListener("touchend", (e) => {
-      if (!tgt) return; const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
-      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) { const b = $(dx < 0 ? ".next" : ".prev", tgt); if (b && !b.hidden) b.click(); tgt.dataset.swiped = "1"; }
-      tgt = null;
-    });
-    root.addEventListener("click", (e) => { const m = e.target.closest(".media"); if (m && m.dataset.swiped) { e.preventDefault(); delete m.dataset.swiped; } }, true);
+    // native swipe (scroll-snap): keep dots and arrows in sync
+    root.addEventListener("scroll", (e) => {
+      const t = e.target;
+      if (!t.classList || !t.classList.contains("track-img") || t._raf) return;
+      t._raf = requestAnimationFrame(() => {
+        t._raf = 0;
+        const media = t.parentElement, n = t.children.length;
+        const i = Math.round(t.scrollLeft / Math.max(1, t.clientWidth));
+        $$(".dots i", media).forEach((d, k) => d.classList.toggle("on", k === i));
+        $(".prev", media).hidden = i === 0; $(".next", media).hidden = i >= n - 1;
+      });
+    }, true);
     root.addEventListener("mouseover", (e) => { const c = e.target.closest(".card"); if (c) highlightPin(c.dataset.id, true); });
     root.addEventListener("mouseout", (e) => { const c = e.target.closest(".card"); if (c && !c.contains(e.relatedTarget)) highlightPin(c.dataset.id, false); });
   }
@@ -238,7 +235,9 @@
   function buildResultsMap(el, list) {
     if (map) { map.remove(); map = null; }
     markerById = {};
-    map = baseMap(el);
+    map = baseMap(el, { zoomControl: !isPhone() });
+    const sheetEl = isPhone() ? el.parentElement.querySelector(".mapsheet") : null;
+    if (sheetEl) map.on("click", () => hideMapSheet(sheetEl));
     landmarkMarkers().addTo(map);
     storeLayer = storeMarkers(true);
     if (S.showStores) storeLayer.addTo(map);
@@ -247,9 +246,9 @@
       if (l.lat == null) continue;
       pts.push([l.lat, l.lng]);
       const cls = ["ppin", l.collection === "pool" ? "pool" : "", S.saved.has(l.id) ? "saved" : "", S.visited.has(l.id) ? "visited" : ""].join(" ");
-      const m = L.marker([l.lat, l.lng], { icon: L.divIcon({ className: "", html: `<div class="${cls}">${kInr(l.total)}</div>`, iconSize: [0, 0] }), riseOnHover: true })
-        .bindPopup(mapCard(l), { closeButton: true, offset: [0, -8], autoPanPaddingTopLeft: [20, 60] })
-        .addTo(map);
+      const m = L.marker([l.lat, l.lng], { icon: L.divIcon({ className: "", html: `<div class="${cls}">${kInr(l.total)}</div>`, iconSize: [0, 0] }), riseOnHover: true }).addTo(map);
+      if (sheetEl) m.on("click", () => showMapSheet(sheetEl, l));
+      else m.bindPopup(mapCard(l), { closeButton: true, offset: [0, -8], autoPanPaddingTopLeft: [20, 60] });
       m.on("mouseover", () => { const c = $(`.card[data-id="${l.id}"]`); c && c.classList.add("hl"); });
       m.on("mouseout", () => { const c = $(`.card[data-id="${l.id}"]`); c && c.classList.remove("hl"); });
       markerById[l.id] = m;
@@ -283,6 +282,22 @@
     legend.addTo(map);
     setTimeout(() => map && map.invalidateSize(), 50);
   }
+  const isPhone = () => window.innerWidth <= 950;
+  let sheetPin = null;
+  function showMapSheet(el, l) {
+    if (sheetPin) highlightPin(sheetPin, false);
+    sheetPin = l.id; highlightPin(l.id, true);
+    el.innerHTML = `<a class="msheet" href="#/l/${l.id}"><img src="${esc(img(l.photos[0], 480))}" alt="">
+      <div class="b"><div class="t">${esc(typeLine(l))}</div><div class="n">${esc(l.name)}</div>
+      <div class="rr">${ratingHtml(l)}<span class="muted">${esc(kmLine(l))}</span></div>
+      <div class="pr"><b>${inr(l.total)}</b> · ${inr(l.perPersonStay)}/person</div>${qcBadges(l)}</div></a>
+      <button class="heart ${S.saved.has(l.id) ? "on" : ""}" data-heart="${l.id}" aria-label="Save ${esc(l.name)}" aria-pressed="${S.saved.has(l.id)}">${ICON.heart}</button>
+      <button class="msx" aria-label="Close">${ICON.close}</button>`;
+    el.hidden = false;
+    $(".msx", el).onclick = () => hideMapSheet(el);
+    $(".heart", el).onclick = (e) => { e.preventDefault(); toggleSave(l.id); };
+  }
+  function hideMapSheet(el) { el.hidden = true; if (sheetPin) highlightPin(sheetPin, false); sheetPin = null; }
   function highlightPin(id, on) {
     const m = markerById[id]; if (!m) return;
     const el = m.getElement()?.querySelector(".ppin"); if (!el) return;
@@ -309,8 +324,8 @@
             <button class="btn-outline" id="openfilters">${ICON.filter}<span class="lbl">Filters</span>${fc ? `<span class="badge">${fc}</span>` : ""}</button>
           </div>
         </div>
-        <div class="chips">${QUICK.map((q) => `<button class="chip ${S.quick.has(q.id) ? "on" : ""}" data-q="${q.id}">${esc(q.label)}</button>`).join("")}</div>
       </div>
+      <div class="chipsbar"><div class="chips">${QUICK.map((q) => `<button class="chip ${S.quick.has(q.id) ? "on" : ""}" data-q="${q.id}">${esc(q.label)}</button>`).join("")}</div></div>
       <section class="results">
         <div class="results-head">
           <div><h1>${list.length ? `${plural(list.length, "stay")} for 29 Dec – 1 Jan` : "No exact matches"}</h1>
@@ -327,7 +342,7 @@
         : `<div class="empty"><h2>No stays match all of these</h2><p>Try removing a filter.</p><button class="btn-dark-outline" id="clearall">Clear filters</button></div>`}
       </section>
       <button class="mapfab" id="mapfab">${S.mobileMap ? `Show list ${ICON.list}` : `Show map ${ICON.map}`}</button>
-      ${S.mobileMap ? `<div class="mapfull"><div class="map" id="mmap"></div></div>` : ""}`;
+      ${S.mobileMap ? `<div class="mapfull"><div class="map" id="mmap"></div><div class="mapsheet" id="mapsheet" hidden></div></div>` : ""}`;
 
     $$(".cat").forEach((b) => b.onclick = () => { S.cat = b.dataset.cat; persist(); viewHome(); });
     $$(".chip").forEach((b) => b.onclick = () => { const q = b.dataset.q; S.quick.has(q) ? S.quick.delete(q) : S.quick.add(q); persist(); viewHome(); });
@@ -337,6 +352,7 @@
     $("#mapfab").onclick = () => { S.mobileMap = !S.mobileMap; viewHome(); window.scrollTo(0, 0); };
     const clear = $("#clearall"); if (clear) clear.onclick = clearFilters;
     const grid = $("#grid"); if (grid) wireCards(grid);
+    document.body.classList.toggle("mapopen", !!S.mobileMap);
     if (split && list.length) buildResultsMap($("#map"), list);
     else if (S.mobileMap) buildResultsMap($("#mmap"), list);
     else if (map) { map.remove(); map = null; markerById = {}; }
@@ -398,7 +414,14 @@
     const live = l.livePrice && Math.abs(l.livePrice - l.total) > 100
       ? `<div class="livewarn">Airbnb showed <b>${inr(l.livePrice)}</b> for these dates when we checked on 26 Nov (sheet price ${inr(l.total)}). Check the live price before booking.</div>` : "";
 
+    const heartSvg = '<svg viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M16 28c7-4.7 14-10 14-17 0-3.9-3.1-7-7-7-2.8 0-5.2 1.7-7 4-1.8-2.3-4.2-4-7-4-3.9 0-7 3.1-7 7 0 7 7 12.3 14 17Z"/></svg>';
     app().innerHTML = `<article class="lp">
+      <div class="mhero">
+        <div class="mtrack" id="mtrack">${p.map((u, i) => `<img src="${esc(img(u, 960))}" alt="${esc(l.photoLabels[i] || "")}" loading="lazy" decoding="async" data-i="${i}">`).join("")}</div>
+        <a class="mh-btn mh-back" href="#/" id="mback" aria-label="Back to all stays">${ICON.back}</a>
+        <div class="mh-right"><button class="mh-btn" id="mshare" aria-label="Share">${ICON.share}</button><button class="mh-btn ${S.saved.has(id) ? "on" : ""}" data-heart="${id}" aria-label="Save" aria-pressed="${S.saved.has(id)}">${heartSvg}</button></div>
+        <span class="mh-count" id="mcount">1 / ${p.length}</span>
+      </div>
       <a class="lp-back" href="#/" id="lpback">${ICON.back} All stays</a>
       <div class="lp-title"><h1>${esc(l.name)}</h1><div class="lp-actions">${share}</div></div>
       <div class="pgrid">${p.slice(0, 5).map((u, i) => `<button data-photo="${i}" aria-label="Open photo ${i + 1}"><img src="${esc(img(u, i ? 720 : 1200))}" alt="${esc(l.photoLabels[i] || "")}" ${i ? 'loading="lazy"' : ""}></button>`).join("")}
@@ -411,6 +434,9 @@
             <div class="ratingline">${l.rating ? `${ICON.star.replace("<svg", '<svg width="14" height="14"')} ${l.rating} · ${plural(l.reviews || 0, "review")}` : "★ New listing, no ratings yet"}${l.kmCityPalace != null ? ` <span class="muted">· ${l.kmCityPalace} km from City Palace</span>` : ""}</div>
             ${l.guestFavourite ? `<div class="favbox"><div class="lb">${l.topFavourite ? "Top guest<br>favourite" : "Guest<br>favourite"}</div><div class="tx">One of the most loved homes on Airbnb, according to guests</div>${l.rating ? `<div class="sc">${l.rating}<div class="muted" style="font-size:12px;font-weight:400">${l.reviews} reviews</div></div>` : ""}</div>` : ""}
           </div>
+          <div class="sec mprice"><h2>Price for 6 guests</h2>
+            <div class="lines"><div><span>3 nights total</span><b>${inr(l.total)}</b></div><div><span>Split 6 ways</span><span>${inr(l.perPersonStay)} each</span></div><div><span>Per person, per night</span><span>${inr(l.perPersonNight)}</span></div>
+            <div><span>Dates</span><span>29 Dec – 1 Jan</span></div><div><span>Cancellation</span><span>${l.freeCancellation ? "Free cancellation" : "See Airbnb"}</span></div></div>${live}</div>
           ${host.name ? `<div class="sec host">${host.photo ? `<img src="${esc(img(host.photo, 240))}" alt="">` : ""}<div><div class="n">Hosted by ${esc(host.name)}</div><div class="s">${esc([host.isSuperhost ? "Superhost" : host.title, hostStats].filter(Boolean).join(" · "))}</div></div></div>` : ""}
           <div class="sec"><h2>Quick commerce for NYE supplies</h2>
             <div class="qcbox">${APPS.map((a) => { const d = l.delivery[a.key]; if (!d) return "";
@@ -445,7 +471,8 @@
         </div></aside>
       </div>
       <div class="mobbar"><div><div class="price">${inr(l.total)} <span class="muted" style="font-weight:400">· 3 nights</span></div><div class="pp">${inr(l.perPersonStay)} per person</div></div>
-        ${airbnbLink ? `<a class="cta" href="${esc(airbnbLink)}" target="_blank" rel="noopener">Check on Airbnb</a>` : ""}</div>
+        <div class="mb-r"><button class="mb-heart ${S.saved.has(id) ? "on" : ""}" data-heart="${id}" aria-label="Save" aria-pressed="${S.saved.has(id)}">${ICON.heart}</button>
+        ${airbnbLink ? `<a class="cta" href="${esc(airbnbLink)}" target="_blank" rel="noopener">Check on Airbnb</a>` : ""}</div></div>
     </article>`;
 
     window.scrollTo(0, 0);
@@ -454,7 +481,12 @@
       const h = e.target.closest("[data-heart]");
       if (h && h.dataset.heart === id) { e.preventDefault(); toggleSave(id); $$(".cta.ghost").forEach((b) => b.textContent = S.saved.has(id) ? "Saved to shortlist ♥" : "Add to shortlist"); }
     };
-    $("#lpback").onclick = (e) => { if (history.length > 1 && lastRoute === "home") { e.preventDefault(); history.back(); } };
+    const goBack = (e) => { if (history.length > 1 && cameFromHome) { e.preventDefault(); history.back(); } };
+    $("#lpback").onclick = goBack; $("#mback").onclick = goBack;
+    $("#mshare").onclick = () => shareLink(location.href, l.name);
+    const mt = $("#mtrack"), mc = $("#mcount");
+    mt.addEventListener("scroll", () => { mc.textContent = `${Math.round(mt.scrollLeft / Math.max(1, mt.clientWidth)) + 1} / ${p.length}`; }, { passive: true });
+    $$("img", mt).forEach((im) => im.onclick = () => openGallery(l, +im.dataset.i));
     $$("[data-photo]").forEach((b) => b.onclick = () => openGallery(l, +b.dataset.photo));
     $("#showall").onclick = () => openGallery(l, null);
     $("#lpshare").onclick = () => shareLink(location.href, l.name);
@@ -562,14 +594,15 @@
   }
 
   // ---------- router ----------
-  let lastRoute = null;
+  let lastRoute = null, cameFromHome = false;
   function route() {
     closeModal();
     $$(".gallery, .lightbox").forEach((e) => e.remove()); document.body.style.overflow = "";
     const h = location.hash.replace(/^#\/?/, "");
     const [a, b] = h.split("/");
     if (lpMap && a !== "l") { lpMap.remove(); lpMap = null; }
-    if (a === "l" && b) { viewListing(decodeURIComponent(b)); lastRoute = "listing"; }
+    if (a !== "" && a !== undefined) document.body.classList.remove("mapopen");
+    if (a === "l" && b) { cameFromHome = lastRoute === "home" || lastRoute === "saved"; viewListing(decodeURIComponent(b)); lastRoute = "listing"; }
     else if (a === "saved") { viewSaved(b ? decodeURIComponent(b).split(",") : undefined); lastRoute = "saved"; }
     else { const y = lastRoute === "listing" ? homeScroll : 0; viewHome(); lastRoute = "home"; if (y) requestAnimationFrame(() => window.scrollTo(0, y)); }
   }
